@@ -8,11 +8,29 @@ import json
 class BaseModel:
     """ Base class model """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """ Constructor """
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        time_format = '%Y-%m-%dT%H:%M:%S.%f'
+
+        if kwargs:
+            for key, value in kwargs.items():
+                if key == "__class__":
+                    pass
+                else:
+                    setattr(self, key, value)
+
+            if 'id' in kwargs.keys():
+                self.id = kwargs['id']
+            if 'created_at' in kwargs.keys():
+                self.created_at = datetime.strptime(kwargs['created_at'],
+                                                    time_format)
+            if 'updated_at' in kwargs.keys():
+                self.updated_at = datetime.strptime(kwargs['updated_at'],
+                                                    time_format)
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """ representation str"""
