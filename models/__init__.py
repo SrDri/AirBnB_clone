@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-'''
-Create FileStorage instance for application
-'''
+""" Packages init - aplication """
 from models.engine.file_storage import FileStorage
 
 storage = FileStorage()
