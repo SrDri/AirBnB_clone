@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ Base class """
+import json
+import models
 from uuid import uuid4
 from datetime import datetime
-import json
 
 
 class BaseModel:
@@ -31,6 +32,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """ representation str"""
@@ -40,13 +42,13 @@ class BaseModel:
     def save(self):
         """ update status time """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """ return __dict__"""
         name_cls = __class__.__name__
-        diccionary = self.__dict__
-        diccionary['__class__'] = name_cls
-        diccionary['created_at'] = self.created_at.isoformat()
-        diccionary['updated_at'] = self.updated_at.isoformat()
-
-        return diccionary
+        self_dict = self.__dict__.copy()
+        self_dict['__class__'] = name_cls
+        self_dict['created_at'] = self.created_at.isoformat()
+        self_dict['updated_at'] = self.updated_at.isoformat()
+        return self_dict
