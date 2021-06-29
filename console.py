@@ -6,6 +6,12 @@ import readline
 import models
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+
 storage = models.storage
 
 
@@ -13,7 +19,8 @@ class HBNBCommand(cmd.Cmd):
     """ class HBNB """
 
     prompt = '(hbnb) '
-    classes = ["BaseModel", "User"]
+    classes = ["BaseModel", "User", "Place", "Amenity", "Review",
+               "City", "State"]
 
     def do_create(self, arg):
         """ Create instance """
@@ -27,6 +34,26 @@ class HBNBCommand(cmd.Cmd):
             storage.new(new_model)
         elif arg[0] == "User":
             new_model = User()
+            print(new_model.id)
+            storage.new(new_model)
+        elif arg[0] == "State":
+            new_model = State()
+            print(new_model.id)
+            storage.new(new_model)
+        elif arg[0] == "City":
+            new_model = City()
+            print(new_model.id)
+            storage.new(new_model)
+        elif arg[0] == "Amenity":
+            new_model = Amenity()
+            print(new_model.id)
+            storage.new(new_model)
+        elif arg[0] == "Place":
+            new_model = Place()
+            print(new_model.id)
+            storage.new(new_model)
+        elif arg[0] == "Review":
+            new_model = Review()
             print(new_model.id)
             storage.new(new_model)
         else:
@@ -81,9 +108,10 @@ class HBNBCommand(cmd.Cmd):
             print(list_print_all)
         else:
             if arg[0] in self.classes:
-                for id_obj in object_dict.keys():
-                    obj = object_dict[id_obj]
-                    list_print_all.append("{}".format(obj))
+                for id_obj in object_dict:
+                    if arg[0] in id_obj:
+                        obj = object_dict[id_obj]
+                        list_print_all.append("{}".format(obj))
                 print(list_print_all)
             else:
                 print("** class doesn't exist **")
