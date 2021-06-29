@@ -46,7 +46,7 @@ class BaseModel:
 
     def to_dict(self):
         """ return __dict__"""
-        name_cls = __class__.__name__
+        name_cls = self.__class__.__name__
         self_dict = self.__dict__.copy()
         self_dict['__class__'] = name_cls
         self_dict['created_at'] = self.created_at.isoformat()
