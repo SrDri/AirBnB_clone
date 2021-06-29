@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ Base class """
 
-from models.base_model import BaseModel
 import json
+from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -10,7 +11,8 @@ class FileStorage:
     __file_path = 'file.json'
     __objects = {}
     clases = {
-        "BaseModel": BaseModel
+        "BaseModel": BaseModel,
+        "User": User
     }
 
     def all(self):
@@ -43,3 +45,11 @@ class FileStorage:
                     FileStorage.__objects[keys] = obj
         except:
             return
+
+    def find_object(cls, id=''):
+        """ Return object id """
+        objs = cls.__objects
+        for obj in objs.values():
+            if obj.id == id:
+                return obj
+        print("No encuentro la ID :::: {} ::::".format(id))
