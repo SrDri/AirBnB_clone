@@ -6,6 +6,7 @@ import pep8
 from models.amenity import Amenity
 from models.base_model import BaseModel
 
+
 class TestAmenity(unittest.TestCase):
     """ Testing """
 
@@ -33,7 +34,9 @@ class TestAmenity(unittest.TestCase):
 
     def test_amenity_save(self):
         self.my_amenity.save()
-        self.assertNotEqual(self. my_amenity.created_at, self. my_amenity.updated_at)
+        created = self.my_amenity.created_at
+        updated = self.my_amenity.updated_at
+        self.assertNotEqual(created, updated)
 
     def test_amenity_todict(self):
         self.assertEqual('to_dict' in dir(self.my_amenity), True)

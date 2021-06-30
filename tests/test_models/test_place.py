@@ -6,6 +6,7 @@ import pep8
 from models.place import Place
 from models.base_model import BaseModel
 
+
 class TestPlace(unittest.TestCase):
     """ Testing """
 
@@ -53,7 +54,9 @@ class TestPlace(unittest.TestCase):
 
     def test_place_save(self):
         self.my_place.save()
-        self.assertNotEqual(self. my_place.created_at, self. my_place.updated_at)
+        created = self.my_place.created_at
+        updated = self.my_place.updated_at
+        self.assertNotEqual(created, updated)
 
     def test_place_todict(self):
         self.assertEqual('to_dict' in dir(self.my_place), True)

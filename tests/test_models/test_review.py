@@ -6,6 +6,7 @@ import pep8
 from models.review import Review
 from models.base_model import BaseModel
 
+
 class TestReview(unittest.TestCase):
     """ Testing """
 
@@ -37,7 +38,9 @@ class TestReview(unittest.TestCase):
 
     def test_review_save(self):
         self.my_review.save()
-        self.assertNotEqual(self. my_review.created_at, self. my_review.updated_at)
+        created = self.my_review.created_at
+        updated = self.my_review.updated_at
+        self.assertNotEqual(created, updated)
 
     def test_review_todict(self):
         self.assertEqual('to_dict' in dir(self.my_review), True)
