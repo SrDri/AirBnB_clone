@@ -31,7 +31,6 @@ class TestStorageDocumentation(unittest.TestCase):
         self.assertTrue(len(FileStorage.save.__doc__) != 0)
         self.assertTrue(len(FileStorage.reload.__doc__) != 0)
 
-class TestStorage(unittest.TestCase):
     """ edge cases """
     def test_attribute_path(self):
         self.assertEqual(FileStorage._FileStorage__file_path, "file.json")
@@ -50,7 +49,7 @@ class TestStorage(unittest.TestCase):
 
     def test_save_exists(self):
         file = "objeto.json"
-        self.assertFalse(os.path.exists(file))
+        self.assertTrue(os.path.exists(file))
         FileStorage._FileStorage__file_path = "objeto.json"
         obj = BaseModel()
         obj.save()
