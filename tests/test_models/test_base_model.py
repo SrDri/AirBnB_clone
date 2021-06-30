@@ -15,6 +15,11 @@ class TestBaseModel(unittest.TestCase):
         cls.base_m.name = "Juan"
         cls.base_m.my_number = 89
 
+    def test_base_model_style(self):
+        estilo = pep8.StyleGuide(quiet=True)
+        path = estilo.check_files(['models/base_model.py'])
+        self.assertEqual(path.total_errors, 0, 'fix pep8')
+
     def test_docstrings(self):
         self.assertIsNotNone(BaseModel.__doc__)
         self.assertIsNotNone(BaseModel.__init__.__doc__)
