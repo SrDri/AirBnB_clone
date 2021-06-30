@@ -50,7 +50,7 @@ class TestStorage(unittest.TestCase):
 
     def test_save_exists(self):
         file = "objeto.json"
-        self.assertFalse(os.path.exists(file))
+        self.assertTrue(os.path.exists(file))
         FileStorage._FileStorage__file_path = "objeto.json"
         obj = BaseModel()
         obj.save()
