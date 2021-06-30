@@ -39,3 +39,8 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(base_m_dict['created_at'], str)
         self.assertIsInstance(base_m_dict['updated_at'], str)
         self.assertEqual(self.base_m.__class__.__name__, 'BaseModel')
+
+    def test_str(self):
+        string = "[BaseModel] ({}) {}".format(
+            self.base_m.id, self.base_m.__dict__)
+        self.assertEqual(string, str(self.base_m))
