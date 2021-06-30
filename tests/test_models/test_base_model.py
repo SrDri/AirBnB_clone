@@ -15,6 +15,9 @@ class TestBaseModel(unittest.TestCase):
         cls.base_m.name = "Juan"
         cls.base_m.my_number = 89
 
+    def delete(cls):
+        del cls.base_m
+
     def test_base_model_style(self):
         estilo = pep8.StyleGuide(quiet=True)
         path = estilo.check_files(['models/base_model.py'])
