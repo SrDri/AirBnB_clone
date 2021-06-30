@@ -33,6 +33,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_init(self):
         self.assertTrue(isinstance(self.base_m, BaseModel))
+        self.assertNotEqual(self.base_m.created_at, self.base_m.updated_at)
 
     def test_save(self):
         self.base_m.save()
