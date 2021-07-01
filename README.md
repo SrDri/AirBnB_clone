@@ -26,8 +26,7 @@ The Command Interpreter is used to manage the whole application's functionality 
 # Installation
 
 1.  Clone this repository in your personal computer or machine with the following command:
-
-    `git clone https://github.com/SrDri/AirBnB_clone.git`
+	`git clone https://github.com/SrDri/AirBnB_clone.git`
 
 2.  Go to the project s folder using the following command:
     `cd AirBnB_clone`
