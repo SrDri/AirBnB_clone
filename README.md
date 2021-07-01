@@ -12,7 +12,7 @@ This is the first step towards building your first full web application: the Air
 #### Description
 The Command Interpreter is used to manage the whole application's functionality from the command line.
 
-## Functionalities of this command interpreter
+#### Functionalities of this command interpreter
 + Crete a new object.
 + Retrieve an object from a file, database, etc.
 + Execute operation on objects. e.g. Count, compute statistics, etc.
