@@ -23,7 +23,7 @@ The Command Interpreter is used to manage the whole application's functionality 
 + Update object's attributes.
 + Destroy an object.
 
-#### Usage
+# Usage
 
 To launch the console application in interactive mode simply run:
 
@@ -63,7 +63,7 @@ update BaseModel 17fa8a0a-f3f8-453f-b0d6-d636802fcafa first_name "Juan Carabali"
 [BaseModel] (17fa8a0a-f3f8-453f-b0d6-d636802fcafa) {'id': '17fa8a0a-f3f8-453f-b0d6-d636802fcafa', 'created_at': datetime.datetime(2021, 7, 1, 2, 48, 30, 971047), 'updated_at': datetime.datetime(2021, 7, 1, 2, 48, 30, 971310), 'first_name': 'Juan Carabali'}
 ```
 
-or to use the non-interactive mode run:
+## or to use the non-interactive mode run:
 
 ``` bash
 echo "your-command-goes-here" | ./console.py
@@ -90,7 +90,7 @@ echo "show BaseModel 17e3e759-2f88-4555-825c-d2a1866772f9" | ./console.py
 ```
 
 
-#### Commands
+## Commands
 
 Commands | Description | Usage
 -------- | ----------- |-------- |
