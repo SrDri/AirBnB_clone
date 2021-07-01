@@ -77,7 +77,7 @@ update BaseModel 17fa8a0a-f3f8-453f-b0d6-d636802fcafa first_name "Juan Carabali"
 [BaseModel] (17fa8a0a-f3f8-453f-b0d6-d636802fcafa) {'id': '17fa8a0a-f3f8-453f-b0d6-d636802fcafa', 'created_at': datetime.datetime(2021, 7, 1, 2, 48, 30, 971047), 'updated_at': datetime.datetime(2021, 7, 1, 2, 48, 30, 971310), 'first_name': 'Juan Carabali'}
 ```
 
-### or to use the non-interactive mode run:
+#### or to use the non-interactive mode run:
 
 ``` bash
 echo "your-command-goes-here" | ./console.py
@@ -104,7 +104,7 @@ echo "show BaseModel 17e3e759-2f88-4555-825c-d2a1866772f9" | ./console.py
 ```
 
 
-## Commands
+# Commands
 
 Commands | Description | Usage
 -------- | ----------- |-------- |
@@ -117,7 +117,7 @@ Commands | Description | Usage
 **all** | Prints all string representation of all instances based or not on the class name | **all** or **all** \<class_name class_id\>
 **update** | Updates an instance based on the class name and id by adding or updating attribute | **update** \<class_name class_id key value\>
 
-## Tests
+# Tests
 
 If you wish to run at the test for this application all of the test are located
 under the **test/** folder and can execute all of them by simply running:
@@ -129,6 +129,10 @@ python3 -m unittest discover tests
 from the root directory.
 
 
-## Bugs
+# Bugs
 
 + No known bugs at this time.
+
+# Contributors
+
+- Juan Carabali [Twitter](https://twitter.com/Juanjch_22) | [Email](juanjcarabali@gmail.com)
