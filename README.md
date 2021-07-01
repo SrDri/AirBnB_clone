@@ -63,7 +63,7 @@ update BaseModel 17fa8a0a-f3f8-453f-b0d6-d636802fcafa first_name "Juan Carabali"
 [BaseModel] (17fa8a0a-f3f8-453f-b0d6-d636802fcafa) {'id': '17fa8a0a-f3f8-453f-b0d6-d636802fcafa', 'created_at': datetime.datetime(2021, 7, 1, 2, 48, 30, 971047), 'updated_at': datetime.datetime(2021, 7, 1, 2, 48, 30, 971310), 'first_name': 'Juan Carabali'}
 ```
 
-## or to use the non-interactive mode run:
+### or to use the non-interactive mode run:
 
 ``` bash
 echo "your-command-goes-here" | ./console.py
