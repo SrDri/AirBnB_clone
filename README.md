@@ -1,8 +1,8 @@
 <h1 align="center">
 	<img src="https://www.tabbykatz.com/hbnb.png">
+	# AirBnB_clone
 </h1>
 
-# AirBnB_clone
 # Synopsis
 
 The Airbnb clone project for which we are creating a copy of the [Airbnb](https://www.airbnb.com/).
