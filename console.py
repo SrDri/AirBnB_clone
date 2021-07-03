@@ -139,6 +139,50 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
+    def do_count(self, arg):
+        """print number instance"""
+        arg = shlex.split(arg)
+
+        if len(arg) < 1:
+            print("** class name missing **")
+            return
+        count = 0
+        objects = storage.all()
+        for key in objects:
+            if objects[key].__class__.__name__ == arg[0]:
+                count += 1
+        print(count)
+
+    def default(self, line):
+        """ function setup """
+        lista_metodos = ["count", "all", "show", "destroy", "update"]
+
+        name_clase = line.split(".", 1)
+        if len(name_clase) < 2:
+            print("** Unknown syntax:", line)
+            return
+        if name_clase[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        name_method = name_clase[1].split("(", 1)
+        if name_method[0] not in lista_metodos or len(name_method) < 2:
+            print("** Unknown syntax:", line)
+            return
+        name_method[1] = name_method[1].strip()
+        if len(name_method[1]) < 1 or name_method[1][-1] != ')':
+            print("** Unknown syntax:", line)
+            return
+        args = name_method[1][:-1]
+        print("### {} ###".format(name_method[1][:-1]))
+        if name_method[0] == "show":
+            return self.do_show(name_clase[0] + " " + args)
+        if name_method[0] == "all":
+            return self.do_all(name_clase[0])
+        if name_method[0] == "destroy":
+            return self.do_destroy(name_clase[0] + " " + args)
+        if name_method[0] == "count":
+            return self.do_count(name_clase[0])
+
     def do_quit(self, arg):
         """Quit command to exit the program"""
         return 1
