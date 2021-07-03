@@ -173,15 +173,8 @@ class HBNBCommand(cmd.Cmd):
             print("** Unknown syntax:", line)
             return
         args = name_method[1][:-1]
-        print("### {} ###".format(name_method[1][:-1]))
         if name_method[0] == "show":
             return self.do_show(name_clase[0] + " " + args)
-        if name_method[0] == "all":
-            return self.do_all(name_clase[0])
-        if name_method[0] == "destroy":
-            return self.do_destroy(name_clase[0] + " " + args)
-        if name_method[0] == "count":
-            return self.do_count(name_clase[0])
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
