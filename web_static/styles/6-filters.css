@@ -36,8 +36,14 @@ ul{
 .locations:hover > .popover{
     visibility: visible;
     margin-bottom: 50px;
+	position: relative;
 }
 
 .amenities:hover > .popover{
     visibility: visible;
+	position: relative;
+}
+
+.amenities .popover li{
+	padding-left: 10px;
 }
