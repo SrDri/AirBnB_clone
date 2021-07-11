@@ -1,0 +1,265 @@
+footer{
+	position: relative;
+}
+
+.places{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.places h1{
+    font-size: 30px;
+}
+
+.places_title{
+    padding-top: 30px;
+    margin-bottom: -25px;
+}
+
+.articles{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article{
+    width: 390px;
+    margin: 20px;
+    padding: 20px;
+    border: solid #FF5A5F 1px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.grid-container h2{
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+
+.place article{
+	display: flex;
+}
+
+
+.place article h2{
+    font-size: 30px;
+    margin-top: 50px;
+    padding-left: 30%;
+}
+
+.article_title{
+    width: 100%;
+}
+
+.price_by_night{
+	display: flex;
+    color: #FF5A5F;
+    border: solid #FF5A5F 4px;
+    border-radius: 50%;
+	width: 60px;
+    min-width: 60px;
+    height: 60px;
+    font-size: 30px;
+    margin-top: -5px;
+	padding: 8px;
+	align-items: center;
+	justify-content: center;
+}
+
+.price{
+	margin: 0;
+}
+
+/* .price_title{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	float: right;
+	justify-content: space-between;
+} */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: max-content auto min-content;
+	grid-gap: 10px;
+	margin-bottom: 10px;
+  }
+
+  .grid-container > div {
+	text-align: center;
+  }
+
+.grid-container h2{
+	padding-left: 70px;
+}
+
+.item1 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.item1 h2{
+	margin-top: 20px;
+}
+
+.information{
+	padding-top: 10px;
+	height: 80px;
+	border-top: solid 1px #DDDDDD;
+	border-bottom: solid 1px #DDDDDD;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+	font-size: 10px;
+}
+
+.user{
+	margin-top: 15px;
+	font-size: 14px;
+	color: rgb(29, 26, 26);
+	text-align: left;
+}
+
+.description{
+	font-size: 14px;
+	text-align: left;
+	margin-top: 5px;
+}
+
+.max_guest{
+    width: 100px;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guest_icon{
+    height: inherit;
+    width: inherit;
+    background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png);
+    background-repeat: no-repeat;
+    margin-left: 25px;
+}
+
+.guest_number h2{
+    font-size: 13px;
+    color: grey;
+}
+
+.number_rooms{
+    width: 100px;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rooms_icon{
+    height: inherit;
+    width: inherit;
+    background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png);
+    background-repeat: no-repeat;
+    margin-left: 25px;
+}
+
+.rooms_number h2{
+    font-size: 13px;
+    color: grey;
+}
+
+.number_bathrooms{
+    width: 100px;
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bathrooms_icon{
+    height: inherit;
+    width: inherit;
+    background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png);
+    background-repeat: no-repeat;
+    margin-left: 25px;
+}
+
+.bathrooms_number h2{
+    font-size: 13px;
+    color: grey;
+}
+
+/* task 100 */
+
+section.places article div.amenities {
+	margin-bottom: 5%;
+    text-align: left;
+	width: 100%;
+}
+
+section.places article div.amenities h2 {
+	font-size: 16px;
+    text-align: left;
+	padding-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD
+}
+
+section.places article div.amenities ul{
+	padding: 0px;
+}
+
+
+section.places article div.amenities ul li {
+	font-size: 14px;
+    height: 10px;
+    list-style: none;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+section.places article div.amenities ul li.wifi {
+    background-image: url('../images/icon_wifi.png');
+	background-size: 30px;
+}
+
+section.places article div.amenities ul li.tv {
+    background-image: url('../images/icon_tv.png');
+	background-size: 30px;
+}
+
+section.places article div.amenities ul li.pets {
+    background-image: url('../images/icon_pets.png');
+	background-size: 30px;
+}
+
+
+section.places article div.reviews {
+    text-align: left;
+}
+
+section.places article div.reviews h2 {
+	font-size: 16px;
+    text-align: left;
+	padding-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD
+}
+
+section.places article div.reviews ul li {
+    list-style: none;
+}
+
+section.places article div.reviews ul{
+	padding: 0px
+}
+
+.reviews p{
+	margin-top: 5px;
+}
+
+.reviews li{
+	padding: 0px;
+}
