@@ -140,7 +140,7 @@ article{
 .guest_icon{
     height: inherit;
     width: inherit;
-    background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_group.png);
+    background: url(../images/icon_group.png);
     background-repeat: no-repeat;
     margin-left: 25px;
 }
@@ -161,7 +161,7 @@ article{
 .rooms_icon{
     height: inherit;
     width: inherit;
-    background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bed.png);
+    background: url(../images/icon_bed.png);
     background-repeat: no-repeat;
     margin-left: 25px;
 }
@@ -182,7 +182,7 @@ article{
 .bathrooms_icon{
     height: inherit;
     width: inherit;
-    background: url(https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon_bath.png);
+    background: url(../images/icon_bath.png);
     background-repeat: no-repeat;
     margin-left: 25px;
 }
